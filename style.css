@@ -3,3 +3,27 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+.container {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(119, 216, 223);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+@media (max-width: 1030px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 820px) {
+  .container {
+    width: 600px;
+  }
+}
+
