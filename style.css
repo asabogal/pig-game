@@ -4,7 +4,9 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.container {
+.flex-container {
+  display: flex;
+  flex-flow: row;
   width: 1000px;
   position: absolute;
   top: 50%;
@@ -12,7 +14,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgb(119, 216, 223);
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 @media (max-width: 1030px) {
@@ -27,3 +29,8 @@ body {
   }
 }
 
+.flex-element {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
