@@ -1,8 +1,8 @@
 /* MAIN */
 
 body {
-  font-family: 'Raleway', sans-serif;
-  background-color: rgb(203, 227, 235);
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #aae2eb
 }
 
 /* FLEX CONTAINER */
@@ -51,7 +51,7 @@ body {
 /* PLAYER CARDS */
 
 .player-name {
-  color: #00B7FF;
+  color: rgb(68, 108, 124);
   text-align: center;
   font-size: 30px;
   margin-top: 20px;
@@ -60,7 +60,7 @@ body {
 }
 
 .player-score {
-  color: #00B7FF;
+  color: rgb(91, 174, 207);
   text-align: center;
   font-size:  60px;
   font-weight: 100;
@@ -75,7 +75,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #00B7FF;
+  background-color: rgb(91, 174, 207);
   color: rgb(233, 241, 245);
   width: 20%;
   height: 45px;
@@ -90,5 +90,6 @@ body {
   top: 100px;
   transform: translateX(-50%);
   height: 100px;
-  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.30);
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.20);
+  background-color: rgb(170, 226, 235);
 }
