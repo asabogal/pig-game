@@ -4,29 +4,20 @@ let scores = [0, 0]
 let activePlayer = 0
 let dice = document.querySelector('.dice')
 
-
-
-document.querySelector('.dice').style.display = 'none';
-document.getElementById('score-0').textContent = '0'
-document.getElementById('score-1').textContent = '0'
-document.getElementById('current-0').textContent = '0'
-document.getElementById('current-1').textContent = '0'
-
+let playerOneScore = document.getElementById('score-0')
+let playerTwoScore = document.getElementById('score-1')
+let playerOneCurrent = document.getElementById('current-0')
+let playerTwoCurrent = document.getElementById('current-1')
 
 const newGame = document.querySelector('.btn-new')
 const rollBtn = document.querySelector('.btn-roll')
 const holdBtn = document.querySelector('.btn-hold')
 
+start()
+
 // CLICK NEW GAME LOGIC
 newGame.addEventListener('click', () => {
-  document.querySelector('.dice').style.display = 'none';
-  document.getElementById('score-0').textContent = '0'
-  document.getElementById('score-1').textContent = '0'
-  document.getElementById('current-0').textContent = '0'
-  document.getElementById('current-1').textContent = '0'
-  roundScore = 0
-  scores = [0, 0]
-  activePlayer = 0
+  start()
 })
 
 // ROLL LOGIC
@@ -50,3 +41,17 @@ rollBtn.addEventListener('click', () => {
   }
 })
 
+function start() {
+  roundScore = 0
+  scores = [0, 0]
+  activePlayer = 0
+  dice.style.display = 'none';
+  resetScores()
+};
+
+function resetScores() {
+  playerOneScore.textContent = '0'
+  playerTwoScore.textContent = '0'
+  playerOneCurrent.textContent = '0'
+  playerTwoCurrent.textContent = '0'
+};
