@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  background-color: #aae2eb;
+  background-color: #644d61;
 }
 
 /* FLEX CONTAINER */
@@ -18,7 +18,8 @@ body {
 .flex-container {
   display: flex;
   flex-flow: row;
-  width: 1000px;
+  width: 800px;
+  height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,7 +44,7 @@ body {
 .flex-element {
   flex: 0 0 50%;
   justify-self: center;
-  padding-top: 10px;
+  padding-top: 40px;
   padding-bottom: 10px;
   background-color:rgb(220, 235, 243);
 }
@@ -64,7 +65,7 @@ body {
   text-align: center;
   font-size:  60px;
   font-weight: 100;
-  margin-bottom: 100px;
+  margin-bottom: 180px;
 }
 
 .active {
@@ -87,7 +88,7 @@ body {
 .dice {
   position: absolute;
   left: 50%;
-  top: 100px;
+  top: 150px;
   transform: translateX(-50%);
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.20);
@@ -117,8 +118,8 @@ button:focus {
 }
 
 .btn-new { top: 20px;}
-.btn-roll { top: 235px;}
-.btn-hold { top: 290px;}
+.btn-roll { top: 300px;}
+.btn-hold { top: 380px;}
 
 ion-icon {
   color: rgb(34, 103, 124);
