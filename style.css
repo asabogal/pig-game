@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  background-color: #aae2eb
+  background-color: #aae2eb;
 }
 
 /* FLEX CONTAINER */
@@ -54,7 +54,7 @@ body {
   color: rgb(68, 108, 124);
   text-align: center;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -64,7 +64,7 @@ body {
   text-align: center;
   font-size:  60px;
   font-weight: 100;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 .active {
@@ -92,4 +92,38 @@ body {
   height: 100px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.20);
   background-color: rgb(170, 226, 235);
+}
+
+/*  BUTTONS */
+
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(6, 166, 206);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 200;
+}
+
+button:hover { font-weight: 300; }
+button:hover i { margin-right: 5px; }
+
+button:focus {
+  outline: none;
+}
+
+.btn-new { top: 20px;}
+.btn-roll { top: 235px;}
+.btn-hold { top: 290px;}
+
+ion-icon {
+  color: rgb(34, 103, 124);
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: 300;
 }
