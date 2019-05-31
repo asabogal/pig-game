@@ -10,3 +10,7 @@ const newGame = document.querySelector('btn-new')
 const rollBtn = document.querySelector('.btn-roll')
 const holdBtn = document.querySelector('.btn-hold')
 
+rollBtn.addEventListener('click', () => {
+  let roll = Math.floor(Math.random() * 6) + 1
+  console.log(roll)
+})
