@@ -41,7 +41,8 @@ body {
   }
 }
 
-.flex-element {
+.player-0-panel,
+.player-1-panel {
   flex: 0 0 50%;
   justify-self: center;
   padding-top: 40px;
