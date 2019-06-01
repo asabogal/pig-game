@@ -34,7 +34,9 @@ rollBtn.addEventListener('click', () => {
     document.querySelector(`#current-${activePlayer}`).textContent = roundScore
 
   } else {
-    changePlayer()
+    
+    setTimeout(()=>{ alert(`Player ${activePlayer + 1} Rolled a 1. Your score resets to 0!`); }, 300);
+    setTimeout(()=>{changePlayer()}, 1000) 
   }
 })
 
