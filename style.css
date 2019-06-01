@@ -47,18 +47,20 @@ body {
   justify-self: center;
   padding-top: 40px;
   padding-bottom: 10px;
-  background-color:rgb(220, 235, 243);
+  background-color:rgb(236, 243, 247);
 }
 
 /* PLAYER CARDS */
 
 .player-name {
-  color: rgb(68, 108, 124);
+  color: rgb(154, 193, 209);
   text-align: center;
   font-size: 30px;
+  font-weight: 200;
   margin-top: 50px;
   margin-bottom: 10px;
   position: relative;
+
 }
 
 .player-score {
@@ -70,7 +72,11 @@ body {
 }
 
 .active {
-  background-color: rgb(227, 237, 255);
+  background-color: rgb(211, 234, 240);
+}
+
+.active .player-name {
+  color: rgb(7, 79, 121);
 }
 
 .current-container {
@@ -122,6 +128,8 @@ button:focus {
 .btn-roll { top: 300px;}
 .btn-hold { top: 360px;}
 
+
+/* ICONS */
 ion-icon {
   color: rgb(34, 103, 124);
   display: inline-block;
