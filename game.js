@@ -19,9 +19,7 @@ const holdBtn = document.querySelector('.btn-hold')
 start()
 
 // CLICK NEW GAME LOGIC
-newGame.addEventListener('click', () => {
-  start()
-})
+newGame.addEventListener('click', start)
 
 // ROLL LOGIC
 rollBtn.addEventListener('click', () => {
@@ -32,12 +30,29 @@ rollBtn.addEventListener('click', () => {
   if (roll !== 1) {
     roundScore += roll
     document.querySelector(`#current-${activePlayer}`).textContent = roundScore
-
   } else {
     
-    setTimeout(()=>{ alert(`Player ${activePlayer + 1} Rolled a 1. Your score resets to 0!`); }, 300);
+    setTimeout(()=>{ alert(`Player ${activePlayer + 1} Rolled a 1. Your score resets to 0!`); }, 200);
     setTimeout(()=>{changePlayer()}, 1000) 
+    
   }
+})
+
+// HOLD BUTTON LOGIC
+holdBtn.addEventListener('click', () => {
+
+  scores[activePlayer] += roundScore
+  document.getElementById(`score-${activePlayer}`).textContent = scores[activePlayer]
+  
+ 
+  if (scores[activePlayer] >= 20) {
+    document.querySelector(`#name-${activePlayer}`).textContent = "WINNER!!"
+    dice.style.display = 'none'
+    setTimeout(()=>{ alert(`Player ${activePlayer + 1} WON!!!`); }, 200);
+  }
+
+  changePlayer()
+
 })
 
 function start() {
@@ -64,4 +79,5 @@ function changePlayer() {
 
   playerOnePanel.classList.toggle('active')
   playerTwoPanel.classList.toggle('active')
+  dice.style.display = 'none'
 }
