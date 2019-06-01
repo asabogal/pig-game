@@ -9,6 +9,9 @@ let playerTwoScore = document.getElementById('score-1')
 let playerOneCurrent = document.getElementById('current-0')
 let playerTwoCurrent = document.getElementById('current-1')
 
+let playerOnePanel = document.querySelector('.player-0-panel')
+let playerTwoPanel = document.querySelector('.player-1-panel')
+
 const newGame = document.querySelector('.btn-new')
 const rollBtn = document.querySelector('.btn-roll')
 const holdBtn = document.querySelector('.btn-hold')
@@ -31,13 +34,7 @@ rollBtn.addEventListener('click', () => {
     document.querySelector(`#current-${activePlayer}`).textContent = roundScore
 
   } else {
-    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0
-    roundScore = 0
-
-    document.getElementById('current-0').textContent = '0'
-    document.getElementById('current-1').textContent = '0'
-
-
+    changePlayer()
   }
 })
 
@@ -55,3 +52,14 @@ function resetScores() {
   playerOneCurrent.textContent = '0'
   playerTwoCurrent.textContent = '0'
 };
+
+function changePlayer() {
+  activePlayer === 0 ? activePlayer = 1 : activePlayer = 0
+  roundScore = 0
+
+  playerOneCurrent.textContent = '0'
+  playerTwoCurrent.textContent = '0'
+
+  playerOnePanel.classList.toggle('active')
+  playerTwoPanel.classList.toggle('active')
+}
