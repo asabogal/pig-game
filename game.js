@@ -4,6 +4,8 @@ let scores = [0, 0]
 let activePlayer = 0
 let dice = document.querySelector('.dice')
 
+let playerOneName = document.getElementById('name-0')
+let playerTwoName = document.getElementById('name-1')
 let playerOneScore = document.getElementById('score-0')
 let playerTwoScore = document.getElementById('score-1')
 let playerOneCurrent = document.getElementById('current-0')
@@ -44,23 +46,27 @@ holdBtn.addEventListener('click', () => {
   scores[activePlayer] += roundScore
   document.getElementById(`score-${activePlayer}`).textContent = scores[activePlayer]
   
- 
-  if (scores[activePlayer] >= 20) {
-    document.querySelector(`#name-${activePlayer}`).textContent = "WINNER!!"
-    dice.style.display = 'none'
-    setTimeout(()=>{ alert(`Player ${activePlayer + 1} WON!!!`); }, 200);
+  if (scores[activePlayer] >= 100) {
+    winner()
+  } else {
+    changePlayer()
   }
-
-  changePlayer()
-
-})
+});
 
 function start() {
   roundScore = 0
   scores = [0, 0]
   activePlayer = 0
   dice.style.display = 'none';
+  playerOnePanel.classList.add('active')
+  playerTwoPanel.classList.remove('active')
   resetScores()
+  playerOneName.textContent = 'PLAYER 1'
+  playerTwoName.textContent = 'PLAYER 2'
+  rollBtn.classList.remove('btn-disabled')
+  holdBtn.classList.remove('btn-disabled')
+  playerOnePanel.classList.remove('winner')
+  playerTwoPanel.classList.remove('winner')
 };
 
 function resetScores() {
@@ -80,4 +86,15 @@ function changePlayer() {
   playerOnePanel.classList.toggle('active')
   playerTwoPanel.classList.toggle('active')
   dice.style.display = 'none'
-}
+};
+
+function winner() {
+  document.querySelector(`#name-${activePlayer}`).textContent = "WINNER!!"
+  document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner')
+  dice.style.display = 'none'
+ 
+  rollBtn.classList.add('btn-disabled')
+  holdBtn.classList.add('btn-disabled')
+
+  setTimeout(()=>{ alert(`Player ${activePlayer + 1} WINS!!!`); }, 200);
+};
