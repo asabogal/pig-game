@@ -109,15 +109,15 @@ button {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgb(6, 166, 206);
+  color: rgb(6, 126, 156);
   background: none;
   border: none;
   font-size: 20px;
   cursor: pointer;
-  font-weight: 200;
+  font-weight: 300;
 }
 
-button:hover { font-weight: 300; }
+button:hover { font-weight: 500; }
 button:hover i { margin-right: 5px; }
 
 button:focus {
@@ -128,6 +128,11 @@ button:focus {
 .btn-roll { top: 300px;}
 .btn-hold { top: 360px;}
 
+.btn-disabled {
+  pointer-events: none;
+  display: none;
+}
+
 
 /* ICONS */
 ion-icon {
@@ -136,4 +141,21 @@ ion-icon {
   margin-right: 5px;
   font-size: 20px;
   font-weight: 300;
+}
+
+/* WINNER */
+.winner {
+  color: rgb(250, 12, 72);
+  font-weight: 800;
+  background-color: rgb(170, 226, 235);
+}
+
+/* ABOUT */
+
+.about{
+  font-size: 15px;
+  font-weight: 100;
+  position: absolute;
+  width: 200px;
+  left: 95%;
 }
