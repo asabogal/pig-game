@@ -35,7 +35,7 @@ rollBtn.addEventListener('click', () => {
   } else {
     
     setTimeout(()=>{ alert(`Player ${activePlayer + 1} Rolled a 1. Your score resets to 0!`); }, 200);
-    setTimeout(()=>{changePlayer()}, 1000) 
+    setTimeout(()=>{changePlayer()}, 200) 
     
   }
 })
