@@ -79,6 +79,10 @@ body {
   color: rgb(7, 79, 121);
 }
 
+.active .player-score {
+  color: rgb(7, 79, 121);
+}
+
 .current-container {
   display: flex;
   flex-direction: column;
@@ -145,14 +149,14 @@ ion-icon {
 
 /* WINNER */
 .winner {
-  color: rgb(250, 12, 72);
+  color: #663860;
   font-weight: 800;
   background-color: rgb(170, 226, 235);
 }
 
 /* ABOUT */
 
-.about{
+.about {
   font-size: 15px;
   font-weight: 100;
   position: absolute;
